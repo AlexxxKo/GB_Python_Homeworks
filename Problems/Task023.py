@@ -1,5 +1,8 @@
-# Дано число N. Заполнить список длиной N элементами 1, -3, 9, -27, 81, -243...
-# N = 5 -> [1, -3, 9, -27, 81]
+# Написать программу, которая принимает на вход число N
+# и выдаёт последовательность из N членов
+
+from random import randint
+
 
 def get_number():
     is_num = False
@@ -13,11 +16,11 @@ def get_number():
     return num
 
 
-def fill_lst(n):
-    lst = [0]*n
+def set_sequence(n):
+    sequence = []
     for i in range(n):
-        lst[i] = (-3)**i
-    return lst
+        sequence.append(randint(1, 100))
+    return sequence
 
 
-print(fill_lst(get_number()))
+print(set_sequence(get_number()))

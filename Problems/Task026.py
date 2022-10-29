@@ -1,5 +1,5 @@
-# Напишите программу, которая принимает на вход число N
-# и выдает набор произведений чисел от 1 до N
+# Задать список из n чисел последовательности (1+1/n)^n
+# и вывести на экран их сумму.
 
 def get_number():
     is_num = False
@@ -15,19 +15,21 @@ def get_number():
     return num
 
 
-def fill_fact_list(n):
-    lst = []
+def get_list(n):
+    list = []
     for i in range(1, n + 1):
-        lst.append(more_fact(i))
-
-    return lst
-
-
-def more_fact(num):
-    if num == 1:
-        return 1
-    else:
-        return num * more_fact(num - 1)
+        x = (1 + 1/i) ** i
+        list.append(round(x, 10))
+    return list
 
 
-print(fill_fact_list(get_number()))
+def sum_list(list):
+    sum = 0
+    for i in range(len(list)):
+        sum += list[i]
+    return round(sum, 10)
+
+
+list = get_list(get_number())
+print(list)
+print(sum_list(list))

@@ -1,4 +1,7 @@
-# Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов
+# Задайте число. Составьте список чисел Фибоначчи,
+# в том числе для отрицательных индексов
+# - для k = 8 список будет выглядеть так:
+# [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
 
 def get_number():
     is_num = False
@@ -13,17 +16,19 @@ def get_number():
             print('Не целое число\n')
     return num
 
+
 def negafib_fib(num):
-    list = []
+    lst = []
     a, b = 1, 1
-    for i in range(num-1):
-        list.append(a)
+    for i in range(num):
+        lst.append(a)
         a, b = b, a + b
     a, b = 0, 1
-    for i in range(num):
-        list.insert(0, a)
+    for i in range(num + 1):
+        lst.insert(0, a)
         a, b = b, a - b
-    return list
+    return lst
+
 
 number = get_number()
 print(number)

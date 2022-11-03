@@ -1,4 +1,8 @@
 # Напишите программу, которая будет преобразовывать десятичное число в двоичное
+# - 45 -> 101101
+# - 3 -> 11
+# - 2 -> 10
+
 def get_number():
     is_num = False
     while not is_num:
@@ -12,6 +16,7 @@ def get_number():
             print('Не целое число\n')
     return num
 
+
 def decimal_binary(num):
     rest = ''
     while num > 0:
@@ -19,8 +24,7 @@ def decimal_binary(num):
         num //= 2
     return int(rest)
 
+
 number = get_number()
 print(number)
 print(decimal_binary(number))
-
-

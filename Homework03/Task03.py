@@ -5,15 +5,15 @@
 
 def sum_fraction_part(lst):
     if len(lst) > 0:
-        min = abs(lst[0]) % 1
-        max = abs(lst[0]) % 1
+        min_num = abs(lst[0]) % 1
+        max_num = abs(lst[0]) % 1
         for i in range(1, len(lst)):
             fraction = abs(lst[i]) % 1
-            if fraction < min:
-                min = fraction
-            if fraction > max:
-                max = fraction
-        return (max - min) * 100 // 1 / 100
+            if fraction < min_num:
+                min_num = fraction
+            if fraction > max_num:
+                max_num = fraction
+        return (max_num - min_num) * 100 // 1 / 100
     else:
         return 'List is null'
 

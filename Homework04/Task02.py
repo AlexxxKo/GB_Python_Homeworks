@@ -18,16 +18,16 @@ def get_number():
 
 def prime_numbers(num):
     first = 2
-    list = []
+    lst = []
     while first <= num:
         if num % first == 0:
-            list.append(first)
+            lst.append(first)
             num //= first
             first = 2
         else:
             first += 1
-    list = list if list else None
-    return list
+    lst = lst if lst else None
+    return lst
 
 
 number = get_number()
